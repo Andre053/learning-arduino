@@ -6,6 +6,13 @@
  * Program Description
  *    Temperature sensor takes in data of your body temperature
  *    depending on the read data, different LEDs will be lit up
+ *    
+ * Project Lessons
+ *    Temperature sensor (TMP36) outputs an analog voltage depending on the temperature it senses
+ *    Arduino has an Analog-to-Digital Converter (ADC) utilized by the analog pins
+ *    Analog pins return a value between 0-1023, which maps between 0-5 volts
+ *    IDE has a serial monitor to enable reporting results from the microcontroller
+ *    
 */
 
 // globals
@@ -14,7 +21,7 @@ const float baselineTemp = 20.0;
 
 void setup() {
   
-  Serial.being(9600); 
+  Serial.begin(9600);   // starts the serial monitor
 
   for (int pinNum = 2; pinNum < 5; pinNum++) {
     pinMode(pinNum, OUTPUT);

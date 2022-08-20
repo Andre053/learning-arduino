@@ -6,16 +6,25 @@
  * 
  * Program Description
  *    Alternates LED colors when the switch is held down
+ *    
+ * Project Lessons
+ *    Pins only read HIGH or LOW, it is called digital/bianary input
+ *    digitalWrite() turns an output pin to HIGH, effectively turning it on
+ *    Every sketch has two main functions, setup() is ran once, loop() runs continuously
+ *    digitalRead() gets the state of an input pin
+ *    delay() pauses execution for a number of milliseconds
+ *    LEDs have a cathode, short and connects to ground, and an anode, long and connects to power
+ * 
 */
 
 int switchState = 0;
 
 void setup() {
   
-  pinMode(3, OUTPUT);
-  pinMode(4, OUTPUT);
-  pinMode(5, OUTPUT);
-  pinMode(2, INPUT); // button pressed
+  pinMode(3, OUTPUT); // LEDs
+  pinMode(4, OUTPUT); 
+  pinMode(5, OUTPUT); 
+  pinMode(2, INPUT);  // button pressed
 
 }
 
