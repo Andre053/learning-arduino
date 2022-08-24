@@ -22,7 +22,7 @@ const float baselineTemp = 20.0;
 void setup() {
   
   Serial.begin(9600);   // starts the serial monitor
-
+:KL
   for (int pinNum = 2; pinNum < 5; pinNum++) {
     pinMode(pinNum, OUTPUT);
     digitalWrite(pinNum, LOW);

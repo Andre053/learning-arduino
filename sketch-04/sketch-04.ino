@@ -6,8 +6,18 @@
  * Program Description
  *    Utilizes Pulse Width Modulation (PWM) to fade LEDs
  *    
- * PWN: Rapidly turns the pin from high and low such that it 
- * is unrecognizable to the human eye
+ * Program Lessons
+ *    To generate the appearance of a fading light, use 
+ *    PWN (Pulse Width Modulation)
+ *    Percentage of time a pin is ON is called the 'duty cycle'
+ *    Lower duty cycle gives a dimmer LED
+ *    Pins with ~ are designated PWN pins
+ *    Phototransistors generate current proportional to the
+ *    quantity of light absorbed
+ *    Allos you to measure change in current
+ *    
+ *    Pulse Width Modulation (PWM): Rapidly turns the pin from 
+ *    high and low such that it is unrecognizable to the human eye
 */
 
 // globals
@@ -45,7 +55,7 @@ void loop() {
   blueSensorVal = analogRead(blueSensorPin);
   delay(5);
 
-  Serial.print("Raw Sensor Values \t red: ");
+  Serial.print("\nRaw Sensor Values \t red: ");
   Serial.print(redSensorVal);
   Serial.print("\t green: ");
   Serial.print(greenSensorVal);
@@ -53,18 +63,19 @@ void loop() {
   Serial.print(blueSensorVal);
 
   redValue = redSensorVal / 4;
-  greeValue = greenSensorVal / 4;
+  greenValue = greenSensorVal / 4;
   blueValue = blueSensorVal / 4;
 
-  Serial.print("Mapped Sensor Values \t red: ");
+  Serial.print("\nMapped Sensor Values \t red: ");
   Serial.print(redValue);
   Serial.print("\t green: ");
   Serial.print(greenValue);
   Serial.print("\t blue: ");
   Serial.print(blueValue);
-
+  Serial.print("\n");
+  
   analogWrite(redLEDPin, redValue);
   analogWrite(greenLEDPin, greenValue);
-  analogWrite(blueLedPin, blueValue);
+  analogWrite(blueLEDPin, blueValue);
   
 }
