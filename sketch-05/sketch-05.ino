@@ -16,6 +16,9 @@
  *    To smooth out the voltage we use capacitors
  *    Decouling capacitors reduce changes caused by the rest of the circuit
  *    Map function maps values of a given range to be within a different range
+ *    
+ * Whats Next?
+ *    Try out different sensors to control the servo
 */
 
 #include <Servo.h> // library for servo motor
