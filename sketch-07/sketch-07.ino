@@ -18,7 +18,7 @@
 */
 
 // globals
-int keyVal;s
+int keyVal;
 
 // array of frequencies we want to play
 // middle C, D, E, and F
